@@ -32,6 +32,7 @@ $(document).ready(function() {
             Crystall.addClass('EachCrystal')
             $('#crystals').append(Crystall);}
             }
+    //resets the game
     function Reset() {
 
         userRandomCounts= 0;
@@ -41,7 +42,7 @@ $(document).ready(function() {
         var numberToGuess = Math.floor((Math.random()* 100) + 19);
         
         $('.ComputerRandomNumber').text(numberToGuess);
-
+        //sets up click for jewels
         $('.EachCrystal').on('click', function(){
             userRandomCounts = userRandomCounts + parseInt($(this).data('num'));
            
