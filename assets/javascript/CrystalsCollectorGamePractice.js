@@ -5,6 +5,11 @@ $(document).ready(function() {
     var losses = 0;
     $('#winning').text(wins);
     $('#losser').text(losses);
+ /*  var name=prompt();
+   function add(jj, jj){
+       return jj+jj;}
+alert (add);*/
+   
    
     Start();
     Reset();
@@ -19,10 +24,10 @@ $(document).ready(function() {
                             rundomguesses = true;}}
                                if(!randomguesses)numbers[numbers.length]=randomnumber;
                      }
-    crystals = ['https://github.com/Hassanish/HW-Wireframe/blob/master/week-4-game/assets/images/RedCrystal.png.docx.png',
-            'https://github.com/Hassanish/HW-Wireframe/blob/master/week-4-game/assets/images/BlueCrystal.png.docx.png',
-            'https://github.com/Hassanish/HW-Wireframe/blob/master/week-4-game/assets/images/YellowCrystal.png.docx.png',
-            'https://github.com/Hassanish/HW-Wireframe/blob/master/week-4-game/assets/images/GreenCrystal.png.docx.png'];            
+    crystals = ["assets/images/blue.png",
+    "assets/images/green.png",
+    "assets/images/red.png",
+    "assets/images/yellow.png"];            
      console.log(numbers);       
        for (i = 0; i < numbers.length; i++) {
             var Crystall = $('<img>');
@@ -32,17 +37,15 @@ $(document).ready(function() {
             Crystall.addClass('EachCrystal')
             $('#crystals').append(Crystall);}
             }
-    //resets the game
     function Reset() {
 
         userRandomCounts= 0;
         $('#TScore').text(userRandomCounts);
-        // Selects a random number to be shown at the start of the game
-        // Number should be should be between 19 - 120
+
         var numberToGuess = Math.floor((Math.random()* 100) + 19);
         
         $('.ComputerRandomNumber').text(numberToGuess);
-        //sets up click for jewels
+
         $('.EachCrystal').on('click', function(){
             userRandomCounts = userRandomCounts + parseInt($(this).data('num'));
            
