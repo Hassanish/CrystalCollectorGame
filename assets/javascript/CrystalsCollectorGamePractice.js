@@ -36,7 +36,8 @@ $(document).ready(function() {
 
         userRandomCounts= 0;
         $('#TScore').text(userRandomCounts);
-
+        // Selects a random number to be shown at the start of the game
+        // Number should be should be between 19 - 120
         var numberToGuess = Math.floor((Math.random()* 100) + 19);
         
         $('.ComputerRandomNumber').text(numberToGuess);
